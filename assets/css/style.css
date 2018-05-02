@@ -1,0 +1,408 @@
+/*
+ *  Author : Ahmed Ouarzazi
+ *  Author URI : http://otahou.be
+ *  tags : mobile-first, flexbox, block, --css-variables, media-query
+*/
+
+/*
+Test for mobile
+*/
+.navigation{display:none;}
+
+/*
+End test for mobile
+*/
+
+
+/*Global Variables*/
+:root {
+  /*Mobile*/
+  --brand-width: 150px;
+  --grey-hr-line : #e1e1e1;
+  --nav-bg-color:#000000;
+  --font-size-icon:28px;
+  --color-icon:#ffffff;
+  --blue-belmobile:#00adef;
+
+  --font-family-icon:"LineAwesome";
+
+  /*Tablet*/
+  --color-icon-lg:#000000;
+
+  /*Wide Screen*/
+
+}
+
+/*Init*/
+body, *{
+  margin: 0;
+  padding:0;
+  text-decoration: none;
+  font-family: "Roboto";
+
+}
+
+
+/*Header Flexbox init*/
+
+.header > *{
+  color:#fff;
+}
+
+.header{
+  background-color: #000; /*IE default*/
+  background-color: var(--nav-bg-color);
+  height: 42px;
+  max-width: 100%;
+  margin:auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items:center;
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+/*Header Componenents block*/
+
+.brand{
+  padding-left:10px;
+  flex : 1 1 auto;
+}
+
+.settings{
+
+}
+
+.cart{
+
+}
+
+.search-box{
+
+}
+
+.navigation{
+  background-color: lightgray;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+  /*85% de l'ecran*/
+  /*flex : 1 1 80% ou flex : 1 1 85%*/
+  /*100%*/
+  flex : 1 1 100%;
+  order:1;
+
+  position: absolute;
+  top:42px;
+  left:0;
+  /*100% ou 80% width*/
+  width: 100%;
+}
+
+.toogle-nav{
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  /*background:#00adeb;*/
+}
+
+/* Logo Componenent*/
+.brand__title{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.brand__logo{
+  display: none;
+}
+
+
+
+/* Search box form */
+.search-box__title{
+
+}
+
+.search-box__form{
+  background-color: var(--blue-belmobile);
+  background-color:#000;
+  z-index: 9999;
+  position: absolute;
+  top:42px;
+  left:0;
+  width: calc(100% - 20px);
+  padding:10px;
+}
+
+
+.search-box__fieldset{
+  border:0;
+}
+.search-box__legend{
+  position: absolute;
+  text-indent: -9999px;
+  font-size: 0;
+}
+.search-box__field{
+  margin:0;
+  height: 26px;
+  padding-left: 10px;
+  width: 100%;
+  border: 1px solid #00adef;
+  border-radius: 3px;
+}
+
+.search-box__submit{
+
+  color:var(--blue-belmobile);
+  color:#fff;
+  height: 28px;
+  background: #00adeb;
+  border: 1px solid #00adef;
+  border-radius: 3px;
+  margin-left: 0px;
+  width: 40px;
+  position: absolute;
+  right:10px;
+  top:8px;
+}
+
+
+
+
+/* Settings Componenent*/
+
+.settings__menu{
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  font-size: 1rem;
+}
+
+.settings__menu-item{
+  font-size: 0;
+}
+
+.settings__menu-link:before{
+  font-size: 28px;/*IE default*/
+  font-size: var(--font-size-icon);
+  color:#fff;/*IE default*/
+  color:var(--color-icon);
+  font-family: "LineAwesome";/*IE default*/
+  font-family:var(--font-family-icon);
+  margin: 0 10px;
+}
+
+.settings__menu-link--icon-connexion:before{
+  content:"\f2fc";
+}
+
+.settings__menu-link--icon-flag:before{
+  content: "\f1f9";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation Componenent*/
+
+.navigation__menu{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: left;
+  list-style: none;
+  list-style-position: inside;
+  font-size: .95rem;
+}
+
+.navigation__menu-item{
+    width: 100%;
+
+    border-bottom: 1px solid #00adeb;
+    /*border-bottom: 1px solid #e1e1e1;*/
+}
+
+.navigation__menu-link--open:after{
+  font-family: "LineAwesome";
+  margin-left: 3px;
+  content: "\f165";
+  float: right;
+}
+
+.navigation__menu-link{
+  display: block;
+  color:#fff;
+  background: #00adeb;
+  padding: 10px;
+
+}
+
+.navigation__menu-link:hover{
+    background: #00a3ef;
+}
+
+.navigation__menu--child{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: left;
+  list-style: none;
+  list-style-position: inside;
+  font-size: .95rem;
+  /*display: none;*/
+}
+
+
+.navigation__menu-item--child{
+  width: 100%;
+  padding:0;
+  /*border-top: 1px solid #eee;*/
+}
+
+
+
+.navigation__menu-link--child{
+  display: block;
+  color:#fff;
+  background: #00adeb;
+  padding: 10px;
+}
+
+.navigation__menu-link--child:hover{
+    background: #00a3ef;
+}
+
+
+
+
+
+/* Cart Componenent*/
+
+.cart__info{
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  font-size: 1rem;
+}
+
+.cart__info-item{
+  font-size: 0;
+
+}
+
+.cart__link--icon-cart:before{
+  font-family: "LineAwesome";
+  content:"\f2fa";
+  margin: 0 10px;
+  font-size: var(--font-size-icon);
+  color:var(--color-icon);
+}
+
+.cart__item-amount{
+  position: absolute;
+  top:2px;
+  right:6px;
+  text-align: center;
+
+  width:13px;
+  height: 13px;
+  font-size:12px;
+  color:var(--color-icon);
+  background-color:var(--blue-belmobile);
+  border-radius: 50%;
+}
+
+
+/*Nav toogle Componenent*/
+
+.toogle-nav__menu{
+  font-size:0;
+}
+
+.toogle-nav__menu:before{
+  font-family: "LineAwesome";
+  content:"\f29a";
+  margin: 0 10px;
+  font-size: var(--font-size-icon);
+  color:var(--color-icon);
+}
+
+
+
+
+/*SMALL Screen*/
+
+@media screen and (max-width: 739px) {
+
+  /*jquery css*/
+  /*-----------*/
+
+  .show{
+  /*display: flex;*/
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: all 300ms;
+  }
+
+  .hidden{
+  /*display: none;*/
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all 300ms;
+  }
+
+  .back{
+   width: 100%;
+   padding:0;
+   cursor: pointer;
+  }
+
+  .back__link{
+   display: block;
+   color:#fff;
+   background: #00a3ef;
+   padding: 10px;
+    cursor: pointer;
+  }
+
+  .mobile a {
+    text-decoration: none;
+  }
+
+  /*DO it via JQuery*/
+  .mobile{
+    position: relative;
+    top: 0px;
+    visibility: visible;
+
+    transition: all 300ms;
+  }
+
+  .clone-area ul{
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
+}
