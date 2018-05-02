@@ -1,13 +1,16 @@
 /*
  *  Author : Ahmed Ouarzazi
  *  Author URI : http://otahou.be
- *  tags : mobile-first, flexbox, block, --css-variables, media-query
+ *  tags :bem-methodology, mobile-first, flexbox, block, --css-variables, media-query
 */
 
 /*
-Test for mobile
+Test for mobile : inutile d'afficher les menus deroulants
 */
 .navigation{display:none;}
+body{
+  font-size:14px;
+}
 
 /*
 End test for mobile
@@ -69,19 +72,19 @@ body, *{
 .brand{
   padding-left:10px;
   flex : 1 1 auto;
+
+}
+
+.search-box{
+  flex : 1 1 100%;
+  order:1;/*Mettre la search box après la barre de menu mobile*/
+
 }
 
 .settings{
 
 }
 
-.cart{
-
-}
-
-.search-box{
-
-}
 
 .navigation{
   background-color: lightgray;
@@ -90,14 +93,19 @@ body, *{
   /*flex : 1 1 80% ou flex : 1 1 85%*/
   /*100%*/
   flex : 1 1 100%;
-  order:1;
-
   position: absolute;
   top:42px;
   left:0;
   /*100% ou 80% width*/
   width: 100%;
+
 }
+
+
+.cart{
+
+}
+
 
 .toogle-nav{
   display: flex;
@@ -106,7 +114,11 @@ body, *{
   /*background:#00adeb;*/
 }
 
-/* Logo Componenent*/
+
+/* ------------------------
+* Brand Componenent elements
+-------------------------- */
+
 .brand__title{
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -119,71 +131,20 @@ body, *{
 }
 
 
+/* -----------------------------
+* Settings Componenent elements
+------------------------------ */
 
-/* Search box form */
-.search-box__title{
-
-}
-
-.search-box__form{
-  background-color: var(--blue-belmobile);
-  background-color:#000;
-  z-index: 9999;
-  position: absolute;
-  top:42px;
-  left:0;
-  width: calc(100% - 20px);
-  padding:10px;
-}
-
-
-.search-box__fieldset{
-  border:0;
-}
-.search-box__legend{
-  position: absolute;
-  text-indent: -9999px;
-  font-size: 0;
-}
-.search-box__field{
-  margin:0;
-  height: 26px;
-  padding-left: 10px;
-  width: 100%;
-  border: 1px solid #00adef;
-  border-radius: 3px;
-}
-
-.search-box__submit{
-
-  color:var(--blue-belmobile);
-  color:#fff;
-  height: 28px;
-  background: #00adeb;
-  border: 1px solid #00adef;
-  border-radius: 3px;
-  margin-left: 0px;
-  width: 40px;
-  position: absolute;
-  right:10px;
-  top:8px;
-}
-
-
-
-
-/* Settings Componenent*/
-
-.settings__menu{
+.settings__menu{/**/
   display: flex;
-  flex-flow:row nowrap;
+  flex-flow: row nowrap;
   justify-content: flex-end;
-  align-items: center;
   list-style: none;
   font-size: 1rem;
 }
 
 .settings__menu-item{
+  /*cacher le texte*/
   font-size: 0;
 }
 
@@ -206,131 +167,57 @@ body, *{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* Navigation Componenent*/
-
-.navigation__menu{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: left;
-  list-style: none;
-  list-style-position: inside;
-  font-size: .95rem;
-}
-
-.navigation__menu-item{
-    width: 100%;
-
-    border-bottom: 1px solid #00adeb;
-    /*border-bottom: 1px solid #e1e1e1;*/
-}
-
-.navigation__menu-link--open:after{
-  font-family: "LineAwesome";
-  margin-left: 3px;
-  content: "\f165";
-  float: right;
-}
-
-.navigation__menu-link{
-  display: block;
-  color:#fff;
-  background: #00adeb;
-  padding: 10px;
-
-}
-
-.navigation__menu-link:hover{
-    background: #00a3ef;
-}
-
-.navigation__menu--child{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: left;
-  list-style: none;
-  list-style-position: inside;
-  font-size: .95rem;
-  /*display: none;*/
-}
-
-
-.navigation__menu-item--child{
-  width: 100%;
-  padding:0;
-  /*border-top: 1px solid #eee;*/
-}
-
-
-
-.navigation__menu-link--child{
-  display: block;
-  color:#fff;
-  background: #00adeb;
-  padding: 10px;
-}
-
-.navigation__menu-link--child:hover{
-    background: #00a3ef;
-}
-
-
-
-
-
-/* Cart Componenent*/
+/* ---------------------------
+* Cart Componenent elements
+---------------------------- */
 
 .cart__info{
   position: relative;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
+  flex-wrap: nowrap;
   list-style: none;
   font-size: 1rem;
 }
 
 .cart__info-item{
+  /*cacher le texte*/
   font-size: 0;
+}
 
+.cart__link:before{
+  font-family: "LineAwesome";/*IE default*/
+  font-family:var(--font-family-icon);
+  font-size: 28px;/*IE default*/
+  font-size: var(--font-size-icon);
+  color:#fff;/*IE default*/
+  color:var(--color-icon);
+  margin: 0 10px;
 }
 
 .cart__link--icon-cart:before{
-  font-family: "LineAwesome";
-  content:"\f2fa";
-  margin: 0 10px;
-  font-size: var(--font-size-icon);
-  color:var(--color-icon);
+    content:"\f2fa";
 }
 
 .cart__item-amount{
+  color:#fff;/*IE default*/
+  color:var(--color-icon);
+  background-color:#00adeb;/*IE default*/
+  background-color:var(--blue-belmobile);
   position: absolute;
   top:2px;
   right:6px;
   text-align: center;
-
   width:13px;
   height: 13px;
   font-size:12px;
-  color:var(--color-icon);
-  background-color:var(--blue-belmobile);
   border-radius: 50%;
 }
 
 
-/*Nav toogle Componenent*/
+
+/*------------------------
+*
+------------------------*/
 
 .toogle-nav__menu{
   font-size:0;
@@ -338,71 +225,11 @@ body, *{
 
 .toogle-nav__menu:before{
   font-family: "LineAwesome";
+  font-family:var(--font-family-icon);
+  color:#fff;/*IE default*/
+  color:var(--color-icon);
+  font-size: 28px;/*IE default*/
+  font-size: var(--font-size-icon);
   content:"\f29a";
   margin: 0 10px;
-  font-size: var(--font-size-icon);
-  color:var(--color-icon);
-}
-
-
-
-
-/*SMALL Screen*/
-
-@media screen and (max-width: 739px) {
-
-  /*jquery css*/
-  /*-----------*/
-
-  .show{
-  /*display: flex;*/
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  transition: all 300ms;
-  }
-
-  .hidden{
-  /*display: none;*/
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.5);
-  transition: all 300ms;
-  }
-
-  .back{
-   width: 100%;
-   padding:0;
-   cursor: pointer;
-  }
-
-  .back__link{
-   display: block;
-   color:#fff;
-   background: #00a3ef;
-   padding: 10px;
-    cursor: pointer;
-  }
-
-  .mobile a {
-    text-decoration: none;
-  }
-
-  /*DO it via JQuery*/
-  .mobile{
-    position: relative;
-    top: 0px;
-    visibility: visible;
-
-    transition: all 300ms;
-  }
-
-  .clone-area ul{
-    position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-  }
 }

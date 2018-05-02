@@ -2,12 +2,122 @@
 <html lang="fr-be" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>[wp_title]</title>
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
 
+    <!-- Main Nav and Secondary Nav -->
 
-    
+    <header class="header">
+
+      <div class="brand">
+          <h1 class="brand__title">[Bloginfo-name]</h1>
+          <img class="brand__logo" src="assets/img/logo_c.png" alt="Belmobile brand logo | Spare parts and Repair tools">
+          <!-- Other stuff Logo -->
+      </div>
+
+      <section class="search-box" role="search">
+        <form action="#" method="get" class="search-box__form">
+            <fieldset class="search-box__fieldset">
+                <legend class="search-box__legend">Search for products :</legend>
+                <label for="s" class="search-box__label">
+                    <input type="search" id="s" placeholder="Search..."  class="search-box__field"/>
+                </label>
+                <input class="search-box__submit" value="Go" type="submit">
+            </fieldset>
+        </form>
+      </section>
+
+      <!-- Secondary Nav -->
+      <nav class="settings">
+        <ul class="settings__menu">
+          <li class="settings__menu-item settings__menu-item--icon-connexion"><a class="settings__menu-link settings__menu-link--icon-connexion" href="#">Connexion</a></li>
+          <li class="settings__menu-item settings__menu-item--icon-flag"><a class="settings__menu-link settings__menu-link--icon-flag" href="#">Language</a></li>
+        </ul>
+      </nav>
+      <!-- /Secondary Nav -->
+
+      <!-- Primaray Nav -->
+        <nav class="navigation">
+            <ul class="navigation__menu" data-parent-menu="home">
+              <li class="navigation__menu-item navigation__menu-item--selected"><a class="navigation__menu-link" href="#">Home</a></li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="product"><a class="navigation__menu-link navigation__menu-link--open" href="#">Nos Produits</a>
+                <ul class="navigation__menu--child" data-parent-menu="product" data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Ecran LCD</a></li>
+                  <li class="navigation__menu-item--child navigation__menu-item--parent" id="connector"><a class="navigation__menu-link--child navigation__menu-link--open" href="#">Connecteur Charge</a>
+                    <ul class="navigation__menu--child" data-parent-menu="connector"  data-back-menu="product">
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 4</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 5</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 6</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 7</a></li>
+                    </ul>
+                  </li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Boutons</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Connecteur Son</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Cameras</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="apple"><a class="navigation__menu-link navigation__menu-link--open" href="#">Apple</a>
+                <ul class="navigation__menu--child" data-parent-menu="apple" data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 4</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 5</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 6</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Samsung</a></li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Outillages</a></li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="accessorie"><a class="navigation__menu-link navigation__menu-link--open" href="#">Nos Accessoires</a>
+                <ul class="navigation__menu--child" data-parent-menu="accessorie"  data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Coque Housse</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Protection Ecran</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Support Automobile</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Casques Oreillettes</a></li>
+                  <li class="navigation__menu-item--child  navigation__menu-item--parent" id="powerbank"><a class="navigation__menu-link--child navigation__menu-link--open" href="#">Powerbank</a>
+                    <ul class="navigation__menu--child" data-parent-menu="powerbank"  data-back-menu="accessories">
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 4</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 5</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 6</a></li>
+                      <li class="navigation__menu-item--child navigation__menu-item--parent" id="pwa7"><a class="navigation__menu-link--child  navigation__menu-link--open" href="#">PW A 7</a>
+                        <ul class="navigation__menu--child" data-parent-menu="pwa7" data-back-menu="powerbank">
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 4</a></li>
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 5</a></li>
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 6</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Cables</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Chargeurs Adaptateurs</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Réparation</a></li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Business</a></li>
+            </ul>
+      </nav>
+      <!-- /Primaray Nav -->
+      <!-- Cart Info -->
+      <div class="cart">
+          <ul class="cart__info">
+            <li class="cart__info-item">
+              <a href="#" class="cart__link cart__link--icon-cart">
+                <span class="cart__title">Cart</span>
+                <span class="cart__item-amount">3</span>
+                <span class="cart__total-price">$145.99</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <!-- /Cart Info -->
+
+      <!-- Toogle Menu Mobile -->
+      <div class="toogle-nav">
+        <a href="#" class="toogle-nav__menu">Menu</a>
+      </div>
+      <!-- /Toogle Menu Mobile -->
+
+    </header>
+    <!-- /Man nav and Secondary Nav -->
 
   </body>
 </html>
