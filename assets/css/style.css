@@ -38,8 +38,9 @@ End test for mobile
 /*Init*/
 body{
     font-size:14px;
-    margin: 0;
+    margin:60px 0 0 0;
     padding: 0;
+
 }
 *{
   text-decoration: none;
@@ -411,7 +412,7 @@ body{
   display: block;
   color:#fff;
   color: var(--white-text-color);
-  padding:10px;
+  padding:10px 0 10px 0;
   border-bottom: 1px solid #232530;
 }
 
@@ -461,4 +462,41 @@ body{
 .copyright__text{
   color:#fff;
   color: var(--white-text-color);
+}
+
+
+
+/****************
+* Main layout
+*****************/
+
+
+
+/* ------------------------
+* 20 Main Element Component
+-------------------------- */
+
+
+.advantage{
+  overflow: hidden;
+}
+
+.advantage__list{
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.advantage__list-item{
+  flex:1 1 auto;
+  padding: 10px 0 10px 20px;
+}
+
+.advantage__bold{
+  font-size: 16px;
+  display: block;
+  color:#00adeb;
+  text-transform: uppercase;
+
 }
