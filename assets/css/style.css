@@ -19,12 +19,14 @@ End test for mobile
   /*Mobile*/
   --brand-width: 150px;
   --grey-hr-line : #e1e1e1;
-  --nav-bg-color:#000000;
+  --nav-bg-color:#00adeb;
   --font-size-icon:28px;
   --color-icon:#ffffff;
   --blue-belmobile:#00adef;
 
   --font-family-icon:"LineAwesome";
+
+  --white-text-color:#ccc;
 
   /*Tablet*/
   --color-icon-lg:#000000;
@@ -356,7 +358,8 @@ body{
 
 .footer{
   color:#fff;
-  background-color:#232530;
+  color: var(--white-text-color);
+  background-color:#000;
   margin:0;
   padding:40px 20px;
   /*To not increase width or height cause of padding*/
@@ -369,22 +372,25 @@ body{
   flex-wrap:wrap;
 }
 
+
 /* ------------------------
 * 10 Footer Element Component
 -------------------------- */
 
 .card{
-  flex: 1 0 250px;
+  flex: 1 1 100%;
   list-style-type: none;
   margin: 0;
   padding:0;
-  /*border:1px solid white;*/
+
 
 }
 
 .card__title{
   color:#00adeb;
   color:  var(--blue-belmobile:#00adef);
+  font-size:1rem;
+  text-transform: uppercase;
 }
 
 .card__text{
@@ -394,18 +400,65 @@ body{
 .card__list{
   list-style-type:none;
   padding:0;
-
 }
 
-.card__list-item{
+.card__list--social{
+  display: flex;
 
 }
 
 .card__list-link{
   display: block;
+  color:#fff;
+  color: var(--white-text-color);
   padding:10px;
+  border-bottom: 1px solid #232530;
+}
 
-  /*background-color:red;
-  border-bottom: 1px solid orange;*/
+.card__list-link--social-icon{
+  font-size: 0;
+}
 
+
+.card__list-link--social-icon:before{
+  font-size: 36px;/*IE default*/
+
+  color:#fff;/*IE default*/
+  color:var(--color-icon);
+  font-family: "LineAwesome";/*IE default*/
+  font-family:var(--font-family-icon);
+  margin: 0 10px;
+}
+
+
+.card__list-link--facebook-icon:before{
+  content:"\f1d7";
+}
+
+.card__list-link--twitter-icon:before{
+  content: "\f359";
+}
+
+.card__list-link--pinterest-icon:before{
+  content: "\f2ba";
+}
+
+.card__list-link--googleplus-icon:before{
+  content: "\f21b";
+}
+
+.card__list-link--instagram-icon:before{
+  content: "\f24d";
+}
+
+.copyright{
+  display: flex;
+  flex:1 1 100%;
+  background-color: #232530;
+  justify-content: center;
+}
+
+.copyright__text{
+  color:#fff;
+  color: var(--white-text-color);
 }
