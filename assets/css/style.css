@@ -7,268 +7,268 @@
 /*
 Test for mobile : inutile d'afficher les menus deroulants
 */
-.navigation{display:none;}
-.search-box{display: none;}
+
+.navigation {
+  display: none;
+}
+
+.search-box {
+  display: none;
+}
+
 /*
 End test for mobile
 */
 
-
 /*Global Variables*/
+
 :root {
   /*Mobile*/
   --brand-width: 150px;
-  --grey-hr-line : #e1e1e1;
-  --nav-bg-color:#00adeb;
-  --font-size-icon:28px;
-  --color-icon:#ffffff;
-  --blue-belmobile:#00adef;
-
-  --font-family-icon:"LineAwesome";
-
-  --white-text-color:#ccc;
-
+  --grey-hr-line: #e1e1e1;
+  --nav-bg-color: #000;
+  --font-size-icon: 28px;
+  --color-icon: #ffffff;
+  --blue-belmobile: #00adef;
+  --font-family-icon: "FontAwesome";
+  --white-text-color: #ccc;
   /*Tablet*/
-  --color-icon-lg:#000000;
-
+  --color-icon-lg: #000000;
   /*Wide Screen*/
-
 }
 
 /*Init*/
-body{
-    font-size:14px;
-    margin:0 0 0 0;
-    padding: 0;
 
+body {
+  font-size: 14px;
+  margin: 60px 0 0 0;
+  padding: 0;
 }
-*{
+
+* {
   text-decoration: none;
   font-family: "Roboto";
 }
 
-
 /****************
 * Header layout
 *****************/
-.header > *{
-  color:#fff;
+
+.header>* {
+  color: #fff;
 }
 
-.header{
-  background-color: #000; /*IE default*/
+.header {
+  background-color: #000;
+  /*IE default*/
   background-color: var(--nav-bg-color);
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   min-height: 42px;
   max-width: 100%;
-  margin:auto;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-content: flex-start;
-  align-items:center;
+  align-items: center;
   position: fixed;
-  top:0;
+  top: 0;
   width: 100%;
   z-index: 999;
 }
-
 
 /* ------------------------
 * 00 Header Bloc Component
 -------------------------- */
 
-.brand{
-  padding-left:10px;
-  flex : 1 1 auto;
-
+.brand {
+  padding-left: 10px;
+  flex: 1 1 auto;
 }
 
-.search-box{
-  flex : 1 1 100%; /* bloc extensible et prenant tout la largeur*/
-  order:1; /*Mettre la search box après la barre de menu mobile*/
-
+.search-box {
+  flex: 1 1 100%;
+  /* bloc extensible et prenant tout la largeur*/
+  order: 1;
+  /*Mettre la search box après la barre de menu mobile*/
 }
 
-.settings{
+.settings {}
 
-}
-
-
-.navigation{
+.navigation {
   background-color: lightgray;
-  box-shadow: 1px 1px 5px rgba(0,0,0,.2);
-  flex : 1 1 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+  flex: 1 1 100%;
   position: absolute;
-  top:42px;
-  left:0;
+  top: 42px;
+  left: 0;
   width: 100%;
-
 }
 
+.cart {}
 
-.cart{
-
-}
-
-
-.toogle-nav{
+.toogle-nav {
   display: flex;
   align-items: center;
   align-self: stretch;
 }
 
-
 /* ------------------------
 * 01 Brand Component elements
 -------------------------- */
 
-.brand__title{
+.brand__title {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 300;
-  padding:0;
+  padding: 0;
   margin: 10px 0;
 }
 
-.brand__logo{
+.brand__logo {
   display: none;
 }
-
 
 /* -----------------------------
 * 02 Settings Component elements
 ------------------------------ */
 
-.settings__menu{/**/
+.settings__menu {
+  /**/
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   list-style: none;
   font-size: 1rem;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
-.settings__menu-item{
+.settings__menu-item {
   /*cacher le texte*/
   font-size: 0;
 }
 
-.settings__menu-link:before{
-  font-size: 28px;/*IE default*/
+.settings__menu-link:before {
+  font-size: 28px;
+  /*IE default*/
   font-size: var(--font-size-icon);
-  color:#fff;/*IE default*/
-  color:var(--color-icon);
-  font-family: "LineAwesome";/*IE default*/
-  font-family:var(--font-family-icon);
+  color: #fff;
+  /*IE default*/
+  color: var(--color-icon);
+  font-family: "LineAwesome";
+  /*IE default*/
+  font-family: var(--font-family-icon);
   margin: 0 10px;
 }
 
-.settings__menu-link--icon-connexion:before{
-  content:"\f2fc";
+.settings__menu-link--icon-connexion:before {
+  content: "\f2fc";
 }
 
-.settings__menu-link--icon-flag:before{
+.settings__menu-link--icon-flag:before {
   content: "\f1f9";
 }
-
 
 /* ---------------------------
 * 03 Cart Component elements
 ---------------------------- */
 
-.cart__info{
+.cart__info {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
   font-size: 1rem;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-.cart__info-item{
+.cart__info-item {
   /*cacher le texte*/
   font-size: 0;
 }
 
-.cart__link:before{
-  font-family: "LineAwesome";/*IE default*/
-  font-family:var(--font-family-icon);
-  font-size: 28px;/*IE default*/
+.cart__link:before {
+  font-family: "LineAwesome";
+  /*IE default*/
+  font-family: var(--font-family-icon);
+  font-size: 28px;
+  /*IE default*/
   font-size: var(--font-size-icon);
-  color:#fff;/*IE default*/
-  color:var(--color-icon);
+  color: #fff;
+  /*IE default*/
+  color: var(--color-icon);
   margin: 0 10px;
 }
 
-.cart__link--icon-cart:before{
-    content:"\f2fa";
+.cart__link--icon-cart:before {
+  content: "\f2fa";
 }
 
-.cart__item-amount{
-  color:#fff;/*IE default*/
-  color:var(--color-icon);
-  background-color:#00adeb;/*IE default*/
-  background-color:var(--blue-belmobile);
+.cart__item-amount {
+  color: #fff;
+  /*IE default*/
+  color: var(--color-icon);
+  background-color: #00adeb;
+  /*IE default*/
+  background-color: var(--blue-belmobile);
   position: absolute;
-  top:2px;
-  right:6px;
+  top: 2px;
+  right: 6px;
   text-align: center;
-  width:13px;
+  width: 13px;
   height: 13px;
-  font-size:12px;
+  font-size: 12px;
   border-radius: 50%;
 }
-
-
 
 /*--------------------------------------
 * 04 Toogle Menu icon  Component elements
 ---------------------------------------*/
 
-.toogle-nav__menu{
-  font-size:0;
+.toogle-nav__menu {
+  font-size: 0;
 }
 
-.toogle-nav__menu:before{
+.toogle-nav__menu:before {
   font-family: "LineAwesome";
-  font-family:var(--font-family-icon);
-  color:#fff;/*IE default*/
-  color:var(--color-icon);
-  font-size: 28px;/*IE default*/
+  font-family: var(--font-family-icon);
+  color: #fff;
+  /*IE default*/
+  color: var(--color-icon);
+  font-size: 28px;
+  /*IE default*/
   font-size: var(--font-size-icon);
-  content:"\f29a";
+  content: "\f29a";
   margin: 0 10px;
 }
-
 
 /* -----------------------------
 * 05 Searchbox Component elements
 ------------------------------ */
 
-.search-box__form{
-  background-color:#00adeb; /*IE default*/
+.search-box__form {
+  background-color: #00adeb;
+  /*IE default*/
   background-color: var(--blue-belmobile);
-
 }
 
-.search-box__fieldset{
-  border:0;
+.search-box__fieldset {
+  border: 0;
   padding: 10px 7px;
 }
 
-.search-box__legend{
+.search-box__legend {
   /*position: absolute;
   text-indent: -9999px;*/
   font-size: 0;
 }
 
-.search-box__field{
-  margin:0;
+.search-box__field {
+  margin: 0;
   height: 26px;
   padding-left: 10px;
   width: 100%;
@@ -276,16 +276,15 @@ body{
   border-radius: 3px;
 }
 
-.search-box__submit{
-  display:none;
+.search-box__submit {
+  display: none;
 }
-
 
 /* -----------------------------
 * 06 Main menu Component elements
 ------------------------------ */
 
-.navigation__menu{
+.navigation__menu {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -295,33 +294,31 @@ body{
   font-size: .95rem;
 }
 
-.navigation__menu-item{
-    width: 100%;
-
-    border-bottom: 1px solid #00adeb;
-    /*border-bottom: 1px solid #e1e1e1;*/
+.navigation__menu-item {
+  width: 100%;
+  border-bottom: 1px solid #00adeb;
+  /*border-bottom: 1px solid #e1e1e1;*/
 }
 
-.navigation__menu-link--open:after{
+.navigation__menu-link--open:after {
   font-family: "LineAwesome";
   margin-left: 3px;
   content: "\f165";
   float: right;
 }
 
-.navigation__menu-link{
+.navigation__menu-link {
   display: block;
-  color:#fff;
+  color: #fff;
   background: #00adeb;
   padding: 10px;
-
 }
 
-.navigation__menu-link:hover{
-    background: #00a3ef;
+.navigation__menu-link:hover {
+  background: #00a3ef;
 }
 
-.navigation__menu--child{
+.navigation__menu--child {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -332,207 +329,303 @@ body{
   /*display: none;*/
 }
 
-
-.navigation__menu-item--child{
+.navigation__menu-item--child {
   width: 100%;
-  padding:0;
+  padding: 0;
   /*border-top: 1px solid #eee;*/
 }
 
-
-
-.navigation__menu-link--child{
+.navigation__menu-link--child {
   display: block;
-  color:#fff;
+  color: #fff;
   background: #00adeb;
   padding: 10px;
 }
 
-.navigation__menu-link--child:hover{
-    background: #00a3ef;
+.navigation__menu-link--child:hover {
+  background: #00a3ef;
 }
-
-
 
 /****************
 * Footer layout
 *****************/
 
-.footer{
-  color:#fff;
+.footer {
+  color: #fff;
   color: var(--white-text-color);
-  background-color:#000;
-  margin:0;
-  padding:40px 20px;
+  background-color: #000;
+  margin: 0;
+  padding: 40px 20px;
   /*To not increase width or height cause of padding*/
   box-sizing: border-box;
-  width:100%;
-  margin-top:60px;
+  width: 100%;
+  margin-top: 60px;
   display: flex;
-  justify-content: flex-start;
   align-items: baseline;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
-
 
 /* ------------------------
 * 10 Footer Element Component
 -------------------------- */
 
-.card{
-  flex: 1 1 100%;
+.card {
+  /* max-width: 300px; */
+  flex: 1 1 auto;
   list-style-type: none;
   margin: 0;
-  padding:0;
-
-
+  padding: 0;
 }
 
-.card__title{
-  color:#00adeb;
-  color:  var(--blue-belmobile:#00adef);
-  font-size:1rem;
+.card__title {
+  color: #00adeb;
+  color: var(--blue-belmobile:#00adef);
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
-.card__text{
-
+.card__text {
+  width: 320px;
 }
 
-.card__list{
-  list-style-type:none;
-  padding:0;
+.card__list {
+  width: 320px;
+  list-style-type: none;
+  padding: 0;
 }
 
-.card__list--social{
+.card__list--social {
   display: flex;
-
 }
 
-.card__list-link{
+.card__list-link {
   display: block;
-  color:#fff;
+  color: #fff;
   color: var(--white-text-color);
-  padding:10px 0 10px 0;
+  padding: 10px 0 10px 0;
   border-bottom: 1px solid #232530;
 }
 
-.card__list-link--social-icon{
+/*Modifiers*/
+
+.card__list-link--social-icon {
   font-size: 0;
 }
 
-
-.card__list-link--social-icon:before{
-  font-size: 36px;/*IE default*/
-
-  color:#fff;/*IE default*/
-  color:var(--color-icon);
-  font-family: "LineAwesome";/*IE default*/
-  font-family:var(--font-family-icon);
+.card__list-link--social-icon:before {
+  font-size: 36px;
+  /*IE default*/
+  color: #fff;
+  /*IE default*/
+  color: var(--color-icon);
+  font-family: "LineAwesome";
+  /*IE default*/
+  font-family: var(--font-family-icon);
   margin: 0 10px;
 }
 
-
-.card__list-link--facebook-icon:before{
-  content:"\f1d7";
+.card__list-link--facebook-icon:before {
+  content: "\f1d7";
 }
 
-.card__list-link--twitter-icon:before{
+.card__list-link--twitter-icon:before {
   content: "\f359";
 }
 
-.card__list-link--pinterest-icon:before{
+.card__list-link--pinterest-icon:before {
   content: "\f2ba";
 }
 
-.card__list-link--googleplus-icon:before{
+.card__list-link--googleplus-icon:before {
   content: "\f21b";
 }
 
-.card__list-link--instagram-icon:before{
+.card__list-link--instagram-icon:before {
   content: "\f24d";
 }
 
-.copyright{
+.copyright {
   display: flex;
-  flex:1 1 100%;
+  flex: 1 1 100%;
   background-color: #232530;
   justify-content: center;
 }
 
-.copyright__text{
-  color:#fff;
+.copyright__text {
+  color: #fff;
   color: var(--white-text-color);
 }
-
-
 
 /****************
 * Main layout
 *****************/
 
-
-
 /* ------------------------
 * 20 Main Element Component
 -------------------------- */
 
-
-.advantage{
+.advantage {
   overflow: hidden;
 }
 
-.advantage__list{
-  padding:0;
+.advantage__list {
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.advantage__list-item{
-  flex:1 1 auto;
+.advantage__list-item {
+  flex: 1 1 auto;
   padding: 10px 0 10px 20px;
 }
 
-.advantage__bold{
+.advantage__bold {
   font-size: 16px;
   display: block;
-  color:#00adeb;
+  color: #00adeb;
   text-transform: uppercase;
-
 }
-
 
 /* ------------------------
 * 21 Slide Element Component
 -------------------------- */
-.slide{}
-.slide__list{padding:0;margin:0}
-.slide__list-item{
-  position:relative;
-  width:100%;
-  height:300px;
-  border:1px solid red;background:yellow;
+
+.slide {}
+
+.slide__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.slide__image{
- position: absolute;
+.slide__list-item {
+  position: relative;
+  flex: 1 1 100%;
+  height: auto;
+  border-bottom: 1px solid white;
+  background: black;
+  text-align: center;
 }
 
-.slide__title{
-  top:40%;
-  left:20px;
- position: absolute;
+.slide__image {
+  opacity: .8;
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 
-.slide__description{
- position: absolute;
- top:50%;
- left:20px;
+.slide__text {
+  position: absolute;
 }
 
-.slide__button{
- position: absolute;
-  left:20px;
- bottom:50px;
+.slide__title {
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.slide__description {
+  font-size: 16px;
+  color: #fff;
+}
+
+.slide__button {
+  display: inline-block;
+  background-color: #00adeb;
+  border: 1px solid #00adec;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+/*Modifiers*/
+
+.slide__text--centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide__text--top-right {
+  text-align: right;
+  top: 20px;
+  right: 20px;
+}
+
+.slide__text--top-left {
+  text-align: left;
+  top: 20px;
+  left: 20px;
+}
+
+/* -------------------------------------
+* 22 Products List Element Component
+---------------------------------------- */
+
+.product {}
+
+.product__title {
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #00adeb;
+}
+
+.product__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product__list-item {
+  flex: 1 1 auto;
+  border: 1px solid #eee
+}
+
+/* -------------------------------------
+* 23 Product item Element Component
+---------------------------------------- */
+
+.product-item {
+  padding: 20px;
+}
+
+.product-item__link {
+  color: #000;
+  border: none;
+}
+
+.product-item__image {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.product-item__title {
+  color: black;
+  text-transform: uppercase;
+  font-size: 18px
+}
+
+.product-item__price {
+  color: #00adeb;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-item__rating {
+  display: block;
+  float: right;
+  font-size: 18px;
 }

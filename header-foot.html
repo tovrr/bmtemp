@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>[wp_title]</title>
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
+
   </head>
   <body>
 
@@ -132,18 +135,161 @@
 		</div>
     -->
 
+
     <main class="main">
+
+
+      <!-- slider -->
       <div class="slide">
         <ul class="slide__list">
-            <li class="slide__list-item">
-              <img class="slide__image" src="https://robohash.org/bm?set=set2&size=600x300" alt="alternative text" />
+          <!-- center text for mobile if active-->
+          <li class="slide__list-item">
+            <img class="slide__image" src="http://www.diabetes.org/assets/img/promo/puzzle-images/memorial-image-puzzle.jpg" alt="alternative text" />
+            <div class="slide__text slide__text--centered">
               <h2 class="slide__title">[title slide]</h2>
               <p class="slide__description">[Something to say about the slide image]</p>
               <a class="slide__button" href="#btn">Click here</a>
-            </li>
+            </div>
+          </li>
+
+          <!-- top left text slide -->
+          <!-- <li class="slide__list-item">
+            <img class="slide__image" src="https://imagejournal.org/wp-content/uploads/bb-plugin/cache/grave-roses-by-Eric-Huybrechts-on-flickr-panorama.jpg" alt="alternative text" />
+            <div class="slide__text slide__text--top-left">
+              <h2 class="slide__title">[title slide]</h2>
+              <p class="slide__description">[Something to say about the slide image]</p>
+              <a class="slide__button" href="#btn">Click here</a>
+            </div>
+          </li> -->
+
+          <!-- top right text slide -->
+          <!-- <li class="slide__list-item">
+            <img class="slide__image" src="https://robohash.org/bm0?set=set2&size=600x300" alt="alternative text" />
+            <div class="slide__text slide__text--top-right">
+              <h2 class="slide__title">[title slide]</h2>
+              <p class="slide__description">[Something to say about the slide image]</p>
+              <a class="slide__button" href="#btn">Click here</a>
+            </div>
+          </li> -->
         </ul>
       </div>
-    </main>
+
+
+
+      <!-- Product list -->
+      <!--
+      <section>
+		<h2><span>best selling t-shirts<a href="category.html">shop all mens t-shirts</a></span></h2>
+		<ul class="prodlist cols5 no-border mb20 full-width">
+			<li>
+				<div>
+				<span class="sash">new</span>
+				<a href="product.html">
+				<img src="media/products/prod1.jpg" alt="product">
+				<img src="media/products/prod6.jpg" alt="product" class="altimg">
+				</a>
+				<h3><a href="product.html">Levi's Men's 527 Boot Cut Jeans</a></h3>
+				<h4>levi</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti eligendi vitae vel, corporis reiciendis</p>
+				<span class="price">£9.99</span>
+				<span class="price strap">buy 3 for £54.00</span>
+				<ul class="rating">
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star-o"></i></li>
+					<li>(4)</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+-->
+<section class="product">
+  <h2 class="product__title">Featured Product</h2>
+  <ul class="product__list">
+    <li class="product__list-item">
+
+      <div class="product-item">
+        <a href="#[link]" class="product-item__link">
+          <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+        </a>
+        <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+        <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+        <span class="product-item__price">Eur23.65</span>
+        <div class="product-item__rating">
+          <span class="product-item__rating--star3_5">3,5/5</span>
+          <span class="product-item__rating-review-count">(16 reviews)</span>
+        </div>
+        <div class="buy-now">
+          <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+          <a href="[link]" class="buy-now__view-button-link">View the item</a>
+        </div>
+      </div>
+    </li>
+    <li class="product__list-item">
+
+      <div class="product-item">
+        <a href="#[link]" class="product-item__link">
+          <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+        </a>
+        <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+        <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+        <span class="product-item__price">Eur23.65</span>
+        <div class="product-item__rating">
+          <span class="product-item__rating--star3_5">3,5/5</span>
+          <span class="product-item__rating-review-count">(16 reviews)</span>
+        </div>
+        <div class="buy-now">
+          <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+          <a href="[link]" class="buy-now__view-button-link">View the item</a>
+        </div>
+      </div>
+    </li>
+    <li class="product__list-item">
+
+      <div class="product-item">
+        <a href="#[link]" class="product-item__link">
+          <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+        </a>
+        <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+        <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+        <span class="product-item__price">Eur23.65</span>
+        <div class="product-item__rating">
+          <span class="product-item__rating--star3_5">3,5/5</span>
+          <span class="product-item__rating-review-count">(16 reviews)</span>
+        </div>
+        <div class="buy-now">
+          <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+          <a href="[link]" class="buy-now__view-button-link">View the item</a>
+        </div>
+      </div>
+    </li>
+    <li class="product__list-item">
+
+      <div class="product-item">
+        <a href="#[link]" class="product-item__link">
+          <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+        </a>
+        <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+        <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+        <span class="product-item__price">Eur23.65</span>
+        <div class="product-item__rating">
+          <span class="product-item__rating--star3_5">3,5/5</span>
+          <span class="product-item__rating-review-count">(16 reviews)</span>
+        </div>
+        <div class="buy-now">
+          <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+          <a href="[link]" class="buy-now__view-button-link">View the item</a>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</section>
+</main>
 
 
 
@@ -176,18 +322,6 @@
       <!-- Footer Component 3 -->
       <div class="card">
         <h3 class="card__title">Title card 1</h3>
-        <p class="card__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-
-      <!-- Footer Component 4 -->
-      <div class="card">
-        <h3 class="card__title">Title card 1</h3>
         <ul class="card__list">
             <li class="card__list-item"><a class="card__list-link" href="#">item link 01</a></li>
             <li class="card__list-item"><a class="card__list-link" href="#">item link 01</a></li>
@@ -197,10 +331,29 @@
         </ul>
       </div>
 
+      <!-- Footer Component 4 -->
+      <div class="card">
+        <h3 class="card__title">Title card 1</h3>
+        <p class="card__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="card__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+
+
+
       <!-- Footer Component 5 -->
       <div class="card">
         <h3 class="card__title">Title card 1</h3>
-        <img src="https://robohash.org/belmobile?set=set2" alt="go" />
+        <img src="https://robohash.org/belmobile?set=set1" alt="go" />
       </div>
 
       <!-- Footer Component 6 -->
