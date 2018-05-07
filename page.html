@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr-be" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>[wp_title]</title>
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+
+    <!-- Main Nav and Secondary Nav -->
+
+    <header class="header">
+
+      <div class="brand">
+          <h1 class="brand__title">[Bloginfo-name] </h1>
+          <img class="brand__logo" src="assets/img/logo_c.png" alt="Belmobile brand logo | Spare parts and Repair tools">
+          <!-- Other stuff Logo -->
+      </div>
+
+      <section class="search-box" role="search">
+        <form action="#" method="get" class="search-box__form">
+            <fieldset class="search-box__fieldset">
+                <legend class="search-box__legend">Search for products :</legend>
+                <label for="s" class="search-box__label">
+                    <input type="search" id="s" placeholder="Search..."  class="search-box__field"/>
+                </label>
+                <input class="search-box__submit" value="Go" type="submit">
+            </fieldset>
+        </form>
+      </section>
+
+      <!-- Secondary Nav -->
+      <nav class="settings">
+        <ul class="settings__menu">
+          <li class="settings__menu-item settings__menu-item--icon-connexion"><a class="settings__menu-link settings__menu-link--icon-connexion" href="#">Connexion</a></li>
+          <li class="settings__menu-item settings__menu-item--icon-flag"><a class="settings__menu-link settings__menu-link--icon-flag" href="#">Language</a></li>
+        </ul>
+      </nav>
+      <!-- /Secondary Nav -->
+
+      <!-- Primaray Nav -->
+        <nav class="navigation">
+            <ul class="navigation__menu" data-parent-menu="home">
+              <li class="navigation__menu-item navigation__menu-item--selected"><a class="navigation__menu-link" href="#">Home</a></li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="product"><a class="navigation__menu-link navigation__menu-link--open" href="#">Nos Produits</a>
+                <ul class="navigation__menu--child" data-parent-menu="product" data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Ecran LCD</a></li>
+                  <li class="navigation__menu-item--child navigation__menu-item--parent" id="connector"><a class="navigation__menu-link--child navigation__menu-link--open" href="#">Connecteur Charge</a>
+                    <ul class="navigation__menu--child" data-parent-menu="connector"  data-back-menu="product">
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 4</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 5</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 6</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 7</a></li>
+                    </ul>
+                  </li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Boutons</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Connecteur Son</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Cameras</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="apple"><a class="navigation__menu-link navigation__menu-link--open" href="#">Apple</a>
+                <ul class="navigation__menu--child" data-parent-menu="apple" data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 4</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 5</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 6</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Samsung</a></li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Outillages</a></li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="accessorie"><a class="navigation__menu-link navigation__menu-link--open" href="#">Nos Accessoires</a>
+                <ul class="navigation__menu--child" data-parent-menu="accessorie"  data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Coque Housse</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Protection Ecran</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Support Automobile</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Casques Oreillettes</a></li>
+                  <li class="navigation__menu-item--child  navigation__menu-item--parent" id="powerbank"><a class="navigation__menu-link--child navigation__menu-link--open" href="#">Powerbank</a>
+                    <ul class="navigation__menu--child" data-parent-menu="powerbank"  data-back-menu="accessories">
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 4</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 5</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 6</a></li>
+                      <li class="navigation__menu-item--child navigation__menu-item--parent" id="pwa7"><a class="navigation__menu-link--child  navigation__menu-link--open" href="#">PW A 7</a>
+                        <ul class="navigation__menu--child" data-parent-menu="pwa7" data-back-menu="powerbank">
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 4</a></li>
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 5</a></li>
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 6</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Cables</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Chargeurs Adaptateurs</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Réparation</a></li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Business</a></li>
+            </ul>
+      </nav>
+      <!-- /Primaray Nav -->
+      <!-- Cart Info -->
+      <div class="cart">
+          <ul class="cart__info">
+            <li class="cart__info-item">
+              <a href="#" class="cart__link cart__link--icon-cart">
+                <span class="cart__title">Cart</span>
+                <span class="cart__item-amount">3</span>
+                <span class="cart__total-price">$145.99</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <!-- /Cart Info -->
+
+      <!-- Toogle Menu Mobile -->
+      <div class="toogle-nav">
+        <a href="#" class="toogle-nav__menu">Menu</a>
+      </div>
+      <!-- /Toogle Menu Mobile -->
+
+    </header>
+    <!-- /Man nav and Secondary Nav -->
+
+
+
+    <!-- NOT FOR MOBILE
+    <div class="advantage">
+			<ul class="advantage__list">
+				<li class="advantage__list-item"><strong class="advantage__bold">Livraison gratuite</strong> Pour tout achat de plus de 50eur</li>
+				<li class="advantage__list-item"><strong class="advantage__bold">Retour 14 jours ouvrables</strong> Satisfait ou remboursé</li>
+				<li class="advantage__list-item"><strong class="advantage__bold">Paiement sécurisé</strong> Achetez en toute confiance</li>
+        <li class="advantage__list-item"><strong class="advantage__bold">Livraison gratuite</strong> Pour tout achat de plus de 50eur</li>
+			</ul>
+		</div>
+    -->
+
+
+  <main class="main">
+    <!-- section page description  -->
+    <section class="page">
+      <h1 class="page__h1">First title</h1>
+      <p class="page-__text">Belmobile une  société créée en 2014, à Bruxelles, dans un entrepôt de 750m² rassemble plus de 10.000 produits et articles en stock tels que des : accessoires de téléphones portables , outils, cartes mémoires, câbles USB, protecteurs d’écran, chargeurs, batteries et bien plus... Nous sommes aussi une Entreprise Leader dans le domaine de la réparation tous marques mobiles (Apple, iPhone, iPad, Samsung, Huawei, Sony, LG, Microsoft, HTC, BlackBerry …) . Belmobile, fournit des pièces détachées et accessoires pour smartphones et tablettes.</p>
+      <p class="page__text">Enfin visitez notre boutique Belmobile en ligne pour tous vos besoins de pièces détachées iPhone tels que écrans LCD, batteries, connecteurs de charge, nappes flex alimentation. Ainsi , nous offrons des pièces de qualité PREMIUM, à des prix compétitifs et imbattables!
+  Ne laissez pas vos clients attendre trop longtemps pour les réparations. Belmobile.be vous livre en 24 heures! Les commandes sont expédiées gratuitement(*), même le samedi!</p>
+      <p class="page__text">Pour toutes questions ou commentaires, nous sommes disponibles 24/7 par e-mail ou via le chat en direct, vous garantissant une réponse dans les 24 heures.</p>
+
+      <h2 class="page__h2">Second title</h2>
+      <h3 class="page__h3">Third title</h3>
+      <h4 class="page__h4">Fourth title</h4>
+      <h5 class="page__h5">Fifth title</h5>
+      <h6 class="page__h6">Sixth title</h6>
+
+      <ul class="page__list">
+        <li class="page__list-item">Something new</li>
+        <li class="page__list-item">Volgende list</li>
+        <li class="page__list-item">Une nouveauté</li>
+        <li class="page__list-item">Iets anders</li>
+        <li class="page__list-item">Something else</li>
+        <li class="page__list-item">An item</li>
+      </ul>
+      <p class="page__text">Lorem ipsum dolor sit amet, <a href="" class="page__link">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+  </main>
+
+
+    <!-- Main Footer -->
+    <footer class="footer">
+      <!-- Footer Component 1 -->
+      <div class="card">
+        <h3 class="card__title">Service Clients</h3>
+        <ul class="card__list">
+            <li class="card__list-item"><a class="card__list-link" href="#">A Propos</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Nous contacter</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">FAQ</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Boutique</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Protection vie privée</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Conditions générales</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Component 2 -->
+      <div class="card">
+        <h3 class="card__title">Découvrez nos produits</h3>
+        <ul class="card__list">
+            <li class="card__list-item"><a class="card__list-link" href="#">Pièces détachées</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Outillages</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Accessoires</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Composants Samsung</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Composants iPhone</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Revendre son smartphone</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Component 3 -->
+      <div class="card">
+        <h3 class="card__title">Mon comptes</h3>
+        <ul class="card__list">
+            <li class="card__list-item"><a class="card__list-link" href="#">Inscription</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Panier</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Commandes</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Mot de passe perdu ?</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Component 4 -->
+      <div class="card">
+        <h3 class="card__title">Nous contacter ?</h3>
+        <p class="card__text">
+          Rue Ulens, 88 - 1080 Bruxelles (Molenbeek-Saint-Jean)
+        </p>
+        <p class="card__text">
+          Vous pouvez nous joindre par téléphone ou e-mail :
+        </p>
+        <p class="card__text">
+          +32 (0) 2 275 98 67<br />
+          info@belmobile.be<br />
+          BTW : BE0502737241
+        </p>
+      </div>
+
+
+
+      <!-- Footer Component 5 -->
+
+      <!-- <div class="card">
+        <h3 class="card__title">Title card 1</h3>
+        <img src="https://robohash.org/belmobile?set=set1" alt="go" />
+      </div> -->
+
+      <!-- Footer Component 6 -->
+      <div class="card">
+        <h3 class="card__title">Share with us</h3>
+        <ul class="card__list card__list--social">
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--facebook-icon" href="https://facebook.com">Facebook</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--twitter-icon" href="https://twitter.com">Twitter</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--pinterest-icon" href="https://pinterest.com">Pinterest</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--googleplus-icon" href="https://plus.google.com">Google Plus</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--instagram-icon" href="https://www.instagram.com">Instagram</a></li>
+        </ul>
+      </div>
+
+    </footer>
+    <!-- /Main Footer -->
+
+    <!-- Secondary Footer -->
+    <div class="copyright">
+      <p class="copyright__text">belmobile Copyright [2018]</p>
+    </div>
+    <!-- /Secondary Footer -->
+  </body>
+</html>

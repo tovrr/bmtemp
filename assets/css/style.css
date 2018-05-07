@@ -9,11 +9,16 @@ Test for mobile : inutile d'afficher les menus deroulants
 */
 
 .navigation {
-  display: none;
+display: none;
 }
 
 .search-box {
   display: none;
+}
+
+.main{
+  padding:0;
+  margin:0;
 }
 
 /*
@@ -42,12 +47,15 @@ End test for mobile
 body {
   font-size: 14px;
   margin: 60px 0 0 0;
+
+  /*for mobile*/
+  margin: 40px 0 0 0;
   padding: 0;
 }
 
 * {
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: "Poppins", "Roboto", arial, sans-serif;
 }
 
 /****************
@@ -292,6 +300,8 @@ body {
   list-style: none;
   list-style-position: inside;
   font-size: .95rem;
+  margin:0;
+  padding:0;
 }
 
 .navigation__menu-item {
@@ -326,6 +336,8 @@ body {
   list-style: none;
   list-style-position: inside;
   font-size: .95rem;
+  margin:0;
+  padding:0;
   /*display: none;*/
 }
 
@@ -355,11 +367,11 @@ body {
   color: var(--white-text-color);
   background-color: #000;
   margin: 0;
-  padding: 40px 20px;
+  padding:0;
   /*To not increase width or height cause of padding*/
   box-sizing: border-box;
   width: 100%;
-  margin-top: 60px;
+
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -370,11 +382,12 @@ body {
 -------------------------- */
 
 .card {
-  /* max-width: 300px; */
-  flex: 1 1 auto;
+  /* max-width: 320px; */
+  flex: 1 1 320px;
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin:10px;
+
 }
 
 .card__title {
@@ -385,17 +398,18 @@ body {
 }
 
 .card__text {
-  width: 320px;
+
 }
 
 .card__list {
-  width: 320px;
+
   list-style-type: none;
   padding: 0;
 }
 
 .card__list--social {
   display: flex;
+  /* justify-content: center; */
 }
 
 .card__list-link {
@@ -421,7 +435,7 @@ body {
   font-family: "LineAwesome";
   /*IE default*/
   font-family: var(--font-family-icon);
-  margin: 0 10px;
+  margin-right:10px;
 }
 
 .card__list-link--facebook-icon:before {
@@ -570,7 +584,7 @@ body {
 * 22 Products List Element Component
 ---------------------------------------- */
 
-.product {}
+.product {margin-bottom:30px;}
 
 .product__title {
   font-size: 28px;
@@ -590,8 +604,12 @@ body {
 
 .product__list-item {
   flex: 1 1 auto;
-  border: 1px solid #eee
+  margin:10px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
 }
+
+
 
 /* -------------------------------------
 * 23 Product item Element Component
@@ -628,4 +646,96 @@ body {
   display: block;
   float: right;
   font-size: 18px;
+}
+/*buy now button */
+.buy-now {display:none;}
+
+
+/* -------------------------------------
+* 23 Page description Element Component
+---------------------------------------- */
+.page-description {
+  background-color:#ebebeb;
+  padding:20px;
+  text-align: center;
+}
+.page-description__title {
+  color:#00adeb;
+  font-size: 24px;
+}
+.page-description__subtitle{
+  color:#888888;
+  font-size: 18px;
+}
+.page-description__text {
+    color:#888888;
+}
+.page-description__text--annotation {
+  text-align:right;
+}
+
+/* -------------------------------------
+* 23 Page Element Component
+---------------------------------------- */
+
+.page{
+padding:20px;
+}
+.page__h1{
+
+}
+.page__h2{
+
+}
+.page__h3{
+
+}
+.page__h4{
+
+}
+.page__h5{
+
+}
+.page__h6{
+
+}
+.page__text{
+
+}
+.page__list{
+
+}
+.page__list-item{
+
+}
+.page__link{
+  color:#00adeb;
+}
+
+
+/* -------------------------------------
+* 23 Breadcrumb Element Component
+---------------------------------------- */
+
+
+.breadcrumb{
+padding:20px;
+}
+.breadcrumb__item{
+  color:#00adeb;
+  display: inline;
+}
+
+.breadcrumb__item::before{
+  color:#7d7d7d;
+  content : '/';
+  margin:0 5px;
+}
+
+.breadcrumb__item:first-child::before{
+  content:none;margin:0;
+}
+
+.breadcrumb__link{
+  color:#7d7d7d;
 }
