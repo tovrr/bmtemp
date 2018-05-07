@@ -9,16 +9,16 @@ Test for mobile : inutile d'afficher les menus deroulants
 */
 
 .navigation {
-display: none;
+  display: none;
 }
 
 .search-box {
   display: none;
 }
 
-.main{
-  padding:0;
-  margin:0;
+.main {
+  padding: 0;
+  margin: 0;
 }
 
 /*
@@ -47,7 +47,6 @@ End test for mobile
 body {
   font-size: 14px;
   margin: 60px 0 0 0;
-
   /*for mobile*/
   margin: 40px 0 0 0;
   padding: 0;
@@ -300,8 +299,8 @@ body {
   list-style: none;
   list-style-position: inside;
   font-size: .95rem;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation__menu-item {
@@ -336,8 +335,8 @@ body {
   list-style: none;
   list-style-position: inside;
   font-size: .95rem;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   /*display: none;*/
 }
 
@@ -367,11 +366,10 @@ body {
   color: var(--white-text-color);
   background-color: #000;
   margin: 0;
-  padding:0;
+  padding: 10px;
   /*To not increase width or height cause of padding*/
   box-sizing: border-box;
   width: 100%;
-
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -386,8 +384,7 @@ body {
   flex: 1 1 320px;
   list-style-type: none;
   padding: 0;
-  margin:10px;
-
+  margin: 10px;
 }
 
 .card__title {
@@ -397,12 +394,9 @@ body {
   text-transform: uppercase;
 }
 
-.card__text {
-
-}
+.card__text {}
 
 .card__list {
-
   list-style-type: none;
   padding: 0;
 }
@@ -416,8 +410,8 @@ body {
   display: block;
   color: #fff;
   color: var(--white-text-color);
-  padding: 10px 0 10px 0;
-  border-bottom: 1px solid #232530;
+  padding: 5px 0 5px 0;
+  /*border-bottom: 1px solid #232530;*/
 }
 
 /*Modifiers*/
@@ -435,7 +429,7 @@ body {
   font-family: "LineAwesome";
   /*IE default*/
   font-family: var(--font-family-icon);
-  margin-right:10px;
+  margin-right: 10px;
 }
 
 .card__list-link--facebook-icon:before {
@@ -461,8 +455,9 @@ body {
 .copyright {
   display: flex;
   flex: 1 1 100%;
-  background-color: #232530;
+  background-color: #000;
   justify-content: center;
+  border-top: 1px solid #111;
 }
 
 .copyright__text {
@@ -584,7 +579,9 @@ body {
 * 22 Products List Element Component
 ---------------------------------------- */
 
-.product {margin-bottom:30px;}
+.product {
+  margin-bottom: 30px;
+}
 
 .product__title {
   font-size: 28px;
@@ -592,6 +589,10 @@ body {
   text-transform: uppercase;
   color: #00adeb;
 }
+
+.product__subtitle {}
+
+.product__text {}
 
 .product__list {
   margin: 0;
@@ -604,12 +605,10 @@ body {
 
 .product__list-item {
   flex: 1 1 auto;
-  margin:10px;
+  margin: 10px;
   border-radius: 3px;
   border: 1px solid #ddd;
 }
-
-
 
 /* -------------------------------------
 * 23 Product item Element Component
@@ -647,95 +646,162 @@ body {
   float: right;
   font-size: 18px;
 }
-/*buy now button */
-.buy-now {display:none;}
 
+/*buy now button */
+
+.buy-now {
+  display: none;
+}
 
 /* -------------------------------------
 * 23 Page description Element Component
 ---------------------------------------- */
+
 .page-description {
-  background-color:#ebebeb;
-  padding:20px;
+  background-color: #ebebeb;
+  padding: 20px;
   text-align: center;
 }
+
 .page-description__title {
-  color:#00adeb;
+  color: #00adeb;
   font-size: 24px;
 }
-.page-description__subtitle{
-  color:#888888;
+
+.page-description__subtitle {
+  color: #888888;
   font-size: 18px;
 }
+
 .page-description__text {
-    color:#888888;
+  color: #888888;
 }
+
 .page-description__text--annotation {
-  text-align:right;
+  text-align: right;
 }
 
 /* -------------------------------------
 * 23 Page Element Component
 ---------------------------------------- */
 
-.page{
-padding:20px;
-}
-.page__h1{
-
-}
-.page__h2{
-
-}
-.page__h3{
-
-}
-.page__h4{
-
-}
-.page__h5{
-
-}
-.page__h6{
-
-}
-.page__text{
-
-}
-.page__list{
-
-}
-.page__list-item{
-
-}
-.page__link{
-  color:#00adeb;
+.page {
+  padding: 20px;
 }
 
+.page__h1 {}
+
+.page__h2 {}
+
+.page__h3 {}
+
+.page__h4 {}
+
+.page__h5 {}
+
+.page__h6 {}
+
+.page__text {}
+
+.page__list {}
+
+.page__list-item {}
+
+.page__link {
+  color: #00adeb;
+}
 
 /* -------------------------------------
 * 23 Breadcrumb Element Component
 ---------------------------------------- */
 
-
-.breadcrumb{
-padding:20px;
+.breadcrumb {
+  padding: 20px;
 }
-.breadcrumb__item{
-  color:#00adeb;
+
+.breadcrumb__item {
+  color: #00adeb;
   display: inline;
 }
 
-.breadcrumb__item::before{
-  color:#7d7d7d;
-  content : '/';
-  margin:0 5px;
+.breadcrumb__item::before {
+  color: #7d7d7d;
+  content: '/';
+  margin: 0 5px;
 }
 
-.breadcrumb__item:first-child::before{
-  content:none;margin:0;
+.breadcrumb__item:first-child::before {
+  content: none;
+  margin: 0;
 }
 
-.breadcrumb__link{
-  color:#7d7d7d;
+.breadcrumb__link {
+  color: #7d7d7d;
+}
+
+/* -------------------------------------
+* 24 Pagination, Filtre Element Component
+---------------------------------------- */
+
+.pagination-filtre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px 0 10px 0;
+}
+
+.pagination-filtre--header {
+  border-bottom: 1px solid #eee;
+}
+
+.pagination-filtre--footer {
+  border-top: 1px solid #eee;
+}
+
+.pagination {}
+
+.filtre {}
+
+.filtre__fieldset {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.filtre__select {
+  margin: 0;
+  padding: 0;
+}
+
+.filtre__legend {
+  display: none;
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.pagination__list-nth {
+  text-align: center;
+  background: #eee;
+  margin: 0;
+  padding: 0;
+  border: 1px solid white;
+}
+
+.pagination__link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #000;
+  padding: 7px;
 }
