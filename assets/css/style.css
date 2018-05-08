@@ -584,15 +584,23 @@ body {
 }
 
 .product__title {
+    padding: 0 20px;
   font-size: 28px;
   text-align: center;
   text-transform: uppercase;
   color: #00adeb;
 }
 
-.product__subtitle {}
+.product__subtitle {
+    padding: 0 20px;
+  color: #888888;
+  font-size: 18px;
+}
 
-.product__text {}
+.product__text {
+  padding: 0 20px;
+  color: #888888;
+}
 
 .product__list {
   margin: 0;
@@ -608,6 +616,7 @@ body {
   margin: 10px;
   border-radius: 3px;
   border: 1px solid #ddd;
+  box-shadow: 3px 3px 7px #ddd;
 }
 
 /* -------------------------------------
@@ -646,6 +655,77 @@ body {
   float: right;
   font-size: 18px;
 }
+
+.product-item__rating-star {
+  font-family: "LineAwesome";
+  color:white;
+  font-size: 0;
+}
+
+/*product-item__rating modifiers*/
+.product-item__rating-star--1:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f31b\f31b\f31b\f31b';
+}
+
+.product-item__rating-star--2:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f318\f31b\f31b\f31b';
+}
+
+.product-item__rating-star--3:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f318\f318\f31b\f31b';
+}
+
+.product-item__rating-star--4:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f318\f318\f318\f31b';
+}
+
+.product-item__rating-star-5:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f318\f318\f318\f318';
+}
+
+.product-item__rating-star--0_5:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f31a\f31b\f31b\f31b\f31b';
+}
+
+.product-item__rating-star--1_5:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f31a\f31b\f31b\f31b';
+}
+
+.product-item__rating-star--2_5:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f318\f31a\f31b\f31b';
+}
+
+.product-item__rating-star--3_5:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f318\f318\f31a\f31b';
+}
+
+.product-item__rating-star--4_5:before {
+  color:orange;
+  font-size: 24px;
+  content: '\f318\f318\f318\f318\f31a';
+}
+
+
+
+
 
 /*buy now button */
 
@@ -717,6 +797,7 @@ body {
 
 .breadcrumb {
   padding: 20px;
+  font-size:12px;
 }
 
 .breadcrumb__item {
@@ -746,7 +827,8 @@ body {
 .pagination-filtre {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-flow: row wrap;
   margin: 10px;
   padding: 10px 0 10px 0;
 }
@@ -797,11 +879,28 @@ body {
   padding: 0;
   border: 1px solid white;
 }
-
 .pagination__link {
   display: block;
   width: 20px;
   height: 20px;
   color: #000;
   padding: 7px;
+}
+.pagination__link--next{
+  border-radius: 3px;
+    color: #000;
+  display: block;
+  width:70px;
+  height:30px;
+  padding:10px;
+}
+
+
+.pagination__link--prev{
+  border-radius: 3px;
+    color: #000;
+  display: block;
+  width:70px;
+  height:30px;
+  padding:7px;
 }

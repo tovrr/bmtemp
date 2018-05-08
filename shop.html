@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-be" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>[wp_title]</title>
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
@@ -15,7 +16,7 @@
     <header class="header">
 
       <div class="brand">
-          <h1 class="brand__title">[Bloginfo-name] </h1>
+          <h1 class="brand__title">[BELMOBILE] </h1>
           <img class="brand__logo" src="assets/img/logo_c.png" alt="Belmobile brand logo | Spare parts and Repair tools">
           <!-- Other stuff Logo -->
       </div>
@@ -135,28 +136,61 @@
 		</div>
     -->
 
-
-  <main class="main">
     <!-- breadcrumb  -->
     <ul class="breadcrumb">
-			<li class="breadcrumb__item"><a class="breadcrumb__link" href="[index.html]">Home</a></li>
-			<li class="breadcrumb__item"><a class="breadcrumb__link" href="[category.html]">Category</a></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="[index.html]">Home</a></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="[category.html]">Category</a></li>
       <li class="breadcrumb__item"><a class="breadcrumb__link" href="[subcategory.html]">Subcategory</a></li>
-			<li class="breadcrumb__item">Shopping page</li>
-		</ul>
+      <li class="breadcrumb__item">Shopping page</li>
+    </ul>
 
-    <!-- section page description  -->
-    <section class="page-description">
-      <h2 class="page-description__title">Boutique Belmobile en ligne</h2>
-      <h3 class="page-description__subtitle">Notre Boutique Belmobile en ligne, vous offre une série de produits pour combler vos besoins.</h3>
-      <p class="page-description__text">Vous êtes au bon endroit, Notre Boutique en ligne, vous fourni en pièces détachées iPhone,
-        accessoires pour smartphones et tablettes. Nous vous offrons également un service de réparation de qualité pour la plupart de vos marques de GSM,
-        smartphone au meilleur prix</p>
-    </section>
+
+  <main class="main">
+
+
+
 
     <!-- section des produits de la page shop -->
     <section class="product">
-      <h2 class="product__title">Les plus populaires</h2>
+      <h2 class="product__title">Boutique Belmobile en ligne</h2>
+      <h3 class="product__subtitle">Notre Boutique Belmobile en ligne, vous offre une série de produits pour combler vos besoins.</h3>
+      <p class="product__text">Vous êtes au bon endroit, Notre Boutique en ligne, vous fourni en pièces détachées iPhone,
+        accessoires pour smartphones et tablettes. Nous vous offrons également un service de réparation de qualité pour la plupart de vos marques de GSM,
+        smartphone au meilleur prix</p>
+
+
+        <!--  pagination et filtre -->
+          <header class="pagination-filtre pagination-filtre--header">
+
+            <form class="filtre">
+              <fieldset class="filtre__fieldset">
+                <legend class="filtre__legend">Filtrer par :</legend>
+
+        	     <select name="orderby" class="filtre_select">
+        					<option class="filtre__option" value="menu_order" selected="selected">Tri par défaut</option>
+        					<option class="filtre__option" value="popularity">Tri par popularité</option>
+        					<option class="filtre__option" value="rating">Tri par notes moyennes</option>
+        					<option class="filtre__option" value="date">Tri par nouveauté</option>
+        					<option class="filtre__option" value="price">Tri par tarif croissant</option>
+        					<option class="filtre__option" value="price-desc">Tri par tarif décroissant</option>
+        			</select>
+        	     <input type="hidden" name="paged" value="1">
+               </fieldset>
+            </form>
+
+            <nav class="pagination">
+              <ul class="pagination__list">
+          			<li class="pagination__list-nth"><a class="pagination__link" href="">1</a></li>
+                <li class="pagination__list-nth"><a class="pagination__link" href="">2</a></li>
+                <li class="pagination__list-nth"><a class="pagination__link" href="">3</a></li>
+                <li class="pagination__list-nth"><a class="pagination__link" href="">4</a></li>
+                <li class="pagination__list-nth"><a class="pagination__link" href="">5</a></li>
+                <li class="pagination__list-nth"><a class="pagination__link" href="">6</a></li>
+          		</ul>
+            </nav>
+          </header>
+
+
       <ul class="product__list">
         <li class="product__list-item">
 
@@ -168,7 +202,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -187,7 +221,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -206,7 +240,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€13.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -225,7 +259,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -244,7 +278,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -263,7 +297,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -282,7 +316,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€13.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -301,7 +335,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -320,7 +354,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -339,84 +373,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
-              <span class="product-item__rating-review-count">(16 reviews)</span>
-            </div>
-            <div class="buy-now">
-              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
-              <a href="[link]" class="buy-now__view-button-link">View the item</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="product__list-item">
-
-          <div class="product-item">
-            <a href="#[link]" class="product-item__link">
-              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/6S-WIT-324x324.jpg" alt="[product description]">
-            </a>
-            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
-            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
-            <span class="product-item__price">€13.65</span>
-            <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
-              <span class="product-item__rating-review-count">(16 reviews)</span>
-            </div>
-            <div class="buy-now">
-              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
-              <a href="[link]" class="buy-now__view-button-link">View the item</a>
-            </div>
-          </div>
-        </li>
-        <li class="product__list-item">
-
-          <div class="product-item">
-            <a href="#[link]" class="product-item__link">
-              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
-            </a>
-            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
-            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
-            <span class="product-item__price">€23.65</span>
-            <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
-              <span class="product-item__rating-review-count">(16 reviews)</span>
-            </div>
-            <div class="buy-now">
-              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
-              <a href="[link]" class="buy-now__view-button-link">View the item</a>
-            </div>
-          </div>
-        </li>
-        <li class="product__list-item">
-
-          <div class="product-item">
-            <a href="#[link]" class="product-item__link">
-              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
-            </a>
-            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
-            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
-            <span class="product-item__price">€23.65</span>
-            <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
-              <span class="product-item__rating-review-count">(16 reviews)</span>
-            </div>
-            <div class="buy-now">
-              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
-              <a href="[link]" class="buy-now__view-button-link">View the item</a>
-            </div>
-          </div>
-        </li>
-        <li class="product__list-item">
-
-          <div class="product-item">
-            <a href="#[link]" class="product-item__link">
-              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_czarny-d-324x324.jpg" alt="[product description]">
-            </a>
-            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
-            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
-            <span class="product-item__price">€23.65</span>
-            <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -436,7 +393,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€13.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -455,7 +412,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -474,7 +431,82 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+        <li class="product__list-item">
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_czarny-d-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+            <span class="product-item__price">€23.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="product__list-item">
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/6S-WIT-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+            <span class="product-item__price">€13.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+        <li class="product__list-item">
+
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+            <span class="product-item__price">€23.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+        <li class="product__list-item">
+
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+            <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
+            <span class="product-item__price">€23.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -493,7 +525,7 @@
             <!-- <p class="product__hidden-js" style="display:none">Little description of the product that will be hidden for the design</p> -->
             <span class="product-item__price">€23.65</span>
             <div class="product-item__rating">
-              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
               <span class="product-item__rating-review-count">(16 reviews)</span>
             </div>
             <div class="buy-now">
@@ -503,8 +535,19 @@
           </div>
         </li>
       </ul>
-    </section>
 
+      <!--  pagination et filtre -->
+        <footer class="pagination-filtre pagination-filtre--footer">
+
+          <nav class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__list-nth"><a class="pagination__link--next" href="">Previous</a></li>
+              <li class="pagination__list-nth"><a class="pagination__link--prev" href="">Next</a></li>
+            </ul>
+          </nav>
+        </footer>
+
+    </section>
 
   </main>
 
