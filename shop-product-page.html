@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr-be" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>[wp_title]</title>
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+
+    <!-- Main Nav and Secondary Nav -->
+
+    <header class="header">
+
+      <div class="brand">
+          <h1 class="brand__title">[Belmobile] <span class="brand__title--page">| title </span></h1>
+          <img class="brand__logo" src="assets/img/logo_c.png" alt="Belmobile brand logo | Spare parts and Repair tools">
+          <!-- Other stuff Logo -->
+      </div>
+
+      <div class="search-box" role="search">
+        <form action="#" method="get" class="search-box__form">
+            <fieldset class="search-box__fieldset">
+                <legend class="search-box__legend">Search for products :</legend>
+                <label for="s" class="search-box__label">
+                    <input type="search" id="s" placeholder="Search..."  class="search-box__field"/>
+                </label>
+                <input class="search-box__submit" value="Go" type="submit">
+            </fieldset>
+        </form>
+      </div>
+
+      <!-- Secondary Nav -->
+      <nav class="settings">
+        <ul class="settings__menu">
+          <li class="settings__menu-item settings__menu-item--icon-connexion"><a class="settings__menu-link settings__menu-link--icon-connexion" href="#">Connexion</a></li>
+          <li class="settings__menu-item settings__menu-item--icon-flag"><a class="settings__menu-link settings__menu-link--icon-flag" href="#">Language</a></li>
+        </ul>
+      </nav>
+      <!-- /Secondary Nav -->
+
+      <!-- Primaray Nav -->
+        <nav class="navigation">
+            <ul class="navigation__menu" data-parent-menu="home">
+              <li class="navigation__menu-item navigation__menu-item--selected"><a class="navigation__menu-link" href="#">Home</a></li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="product"><a class="navigation__menu-link navigation__menu-link--open" href="#">Nos Produits</a>
+                <ul class="navigation__menu--child" data-parent-menu="product" data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Ecran LCD</a></li>
+                  <li class="navigation__menu-item--child navigation__menu-item--parent" id="connector"><a class="navigation__menu-link--child navigation__menu-link--open" href="#">Connecteur Charge</a>
+                    <ul class="navigation__menu--child" data-parent-menu="connector"  data-back-menu="product">
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 4</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 5</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 6</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPhone 7</a></li>
+                    </ul>
+                  </li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Boutons</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Connecteur Son</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Cameras</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="apple"><a class="navigation__menu-link navigation__menu-link--open" href="#">Apple</a>
+                <ul class="navigation__menu--child" data-parent-menu="apple" data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 4</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 5</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 6</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Samsung</a></li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Outillages</a></li>
+              <li class="navigation__menu-item navigation__menu-item--parent" id="accessorie"><a class="navigation__menu-link navigation__menu-link--open" href="#">Nos Accessoires</a>
+                <ul class="navigation__menu--child" data-parent-menu="accessorie"  data-back-menu="home">
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Coque Housse</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Protection Ecran</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Support Automobile</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Casques Oreillettes</a></li>
+                  <li class="navigation__menu-item--child  navigation__menu-item--parent" id="powerbank"><a class="navigation__menu-link--child navigation__menu-link--open" href="#">Powerbank</a>
+                    <ul class="navigation__menu--child" data-parent-menu="powerbank"  data-back-menu="accessories">
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 4</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 5</a></li>
+                      <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">PW A 6</a></li>
+                      <li class="navigation__menu-item--child navigation__menu-item--parent" id="pwa7"><a class="navigation__menu-link--child  navigation__menu-link--open" href="#">PW A 7</a>
+                        <ul class="navigation__menu--child" data-parent-menu="pwa7" data-back-menu="powerbank">
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 4</a></li>
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 5</a></li>
+                          <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">iPad 6</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Cables</a></li>
+                  <li class="navigation__menu-item--child"><a class="navigation__menu-link--child" href="#">Chargeurs Adaptateurs</a></li>
+                </ul>
+              </li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Réparation</a></li>
+              <li class="navigation__menu-item"><a class="navigation__menu-link" href="#">Business</a></li>
+            </ul>
+      </nav>
+      <!-- /Primaray Nav -->
+      <!-- Cart Info -->
+      <div class="cart">
+          <ul class="cart__info">
+            <li class="cart__info-item">
+              <a href="#" class="cart__link cart__link--icon-cart">
+                <span class="cart__title">Cart</span>
+                <span class="cart__item-amount">3</span>
+                <span class="cart__total-price">$145.99</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <!-- /Cart Info -->
+
+      <!-- Toogle Menu Mobile -->
+      <div class="toogle-nav">
+        <a href="#" class="toogle-nav__menu">Menu</a>
+      </div>
+      <!-- /Toogle Menu Mobile -->
+    </header>
+    <!-- /Man nav and Secondary Nav -->
+
+
+
+    <!-- NOT FOR MOBILE
+    <div class="advantage">
+			<ul class="advantage__list">
+				<li class="advantage__list-item"><strong class="advantage__bold">Livraison gratuite</strong> Pour tout achat de plus de 50eur</li>
+				<li class="advantage__list-item"><strong class="advantage__bold">Retour 14 jours ouvrables</strong> Satisfait ou remboursé</li>
+				<li class="advantage__list-item"><strong class="advantage__bold">Paiement sécurisé</strong> Achetez en toute confiance</li>
+        <li class="advantage__list-item"><strong class="advantage__bold">Livraison gratuite</strong> Pour tout achat de plus de 50eur</li>
+			</ul>
+		</div>
+    -->
+
+    <!-- breadcrumb  -->
+    <ul class="breadcrumb">
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="[index.html]">Home</a></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="[category.html]">Category</a></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="[subcategory.html]">Subcategory</a></li>
+      <li class="breadcrumb__item">Shopping Category page</li>
+    </ul>
+
+
+  <main class="main">
+
+    <!--  produit de la page shop -->
+    <article class="product-page">
+
+      <!-- header page compononent for mobile only-->
+      <header class="product-heading">
+        <h1 class="product-heading__title">Nappe du Bouton Home Pour iPhone 5</h1>
+
+        <div class="product-item__rating product-item__rating--center">
+          <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
+          <span class="product-item__rating-review-count">(16 reviews)</span>
+        </div>
+      </header>
+
+
+    <!-- gallery page compononent-->
+        <section class="product-gallery">
+          <h2 class="product-gallery__title">Gallery</h2>
+    			<img class="product-gallery__image" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_czarny-d.jpg">
+    			<ul class="product-gallery__thumbnails-list">
+            <li class="product-gallery__thumbnails-item"><img class="product-gallery__image-thumbs" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_czarny-d-100x100.jpg" alt=""></li>
+            <li class="product-gallery__thumbnails-item"><img class="product-gallery__image-thumbs" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_bialy-d-100x100.jpg" alt=""></li>
+    				<li class="product-gallery__thumbnails-item"><img class="product-gallery__image-thumbs" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_srebrny-d-100x100.jpg" alt=""></li>
+    				<li class="product-gallery__thumbnails-item"><img class="product-gallery__image-thumbs" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_czarny-2-d-100x100.jpg" alt=""></li>
+    			</ul>
+    		</section>
+
+        <!-- header page compononent for desktop only-->
+        <!--
+        <header class="product-heading">
+          <h1 class="product-heading__title">Nappe du Bouton Home Pour iPhone 5</h1>
+
+          <div class="product-item__rating product-item__rating--center">
+            <span class="product-item__rating-star product-item__rating-star--3_5">3,5/5</span>
+            <span class="product-item__rating-review-count">(16 reviews)</span>
+          </div>
+        </header>
+      -->
+
+        <!-- price, promotion and old price -->
+        <div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+			     <meta itemprop="priceCurrency" content="EUR" />
+			     <meta itemprop="availability" content="in stock" />
+			     <span class="price__amount" itemprop="price" content="24.99">€24.99 <s class="price__old">€56.99</s></span>
+           <p class="availability__stock">
+             Disponibilité : <span class="availability__stock--green"> 10 en stock</span>
+          </p>
+        </div>
+
+
+        <article class="product-description">
+
+          <h3 class="product-description__title">Lorem ipsum dolor</h3>
+          <p class="product-description__text">
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Maxime eaque nam pariatur error eveniet
+            sit nostrum dolor doloribus, suscipit nisi harum amet, ducimus fugit
+            quisquam nemo repellat officiis eligendi. Commodi!
+          </p>
+
+        </article>
+
+        <!-- form product elements -->
+        <form class="product-option">
+
+          <fieldset class="product-option__fieldset">
+            <legend class="product-option__legend">Selectionner vos options d'achat </legend>
+            <label class="product-option__label" for="color">Couleur : </label>
+            <select class="product-option__select" id="color">
+              <option class="product-option__option" value="">Choisir une couleur</option>
+              <option class="product-option__option" value="blanc">Blanc</option>
+              <option class="product-option__option" value="noir">Noir</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="product-option__fieldset">
+            <legend class="product-option__legend">Selectionner la quantité et valider </legend>
+            <label class="product-option__label" for="quantity">Quantité :</label>
+            <input class="product-option__input" id="quantity" type="number" value="1">
+            <button class="product-option__button">Ajouter au panier</button>
+          </fieldset>
+
+          <aside class="product-option__alternative">
+            <h5 class="product-option__title">Vous avez besoin d'une plus grande quantité ?</h5>
+            <p class="product-option__text">Demandez nous un devis gratuit <a href="#" class="product-option__link">ici</a></p>
+          </aside>
+
+        </form>
+
+
+        <aside class="product-aside">
+
+          <section class="product-category">
+            <h4 class="product-category__title">Catégories :</h4>
+            <ul class="product-category__category-list">
+              <li class="product-category__category-list-item"><a href="#" class="product-category__link">Apple</a></li>
+              <li class="product-category__category-list-item"><a href="#" class="product-category__link">iPhone7</a></li>
+              <li class="product-category__category-list-item"><a href="#" class="product-category__link">Composants</a></li>
+            </ul>
+          </section>
+          <section class="product-tag">
+            <h4 class="product-tag__title">Etiquettes :</h4>
+            <ul class="product-tag__tag-list">
+              <li class="product-tag__tag-list-item"><a href="#" class="product-tag__link">Caméra</a></li>
+              <li class="product-tag__tag-list-item"><a href="#" class="product-tag__link">Flex map</a></li>
+              <li class="product-tag__tag-list-item"><a href="#" class="product-tag__link">Noir</a></li>
+              <li class="product-tag__tag-list-item"><a href="#" class="product-tag__link">Ecran</a></li>
+              <li class="product-tag__tag-list-item"><a href="#" class="product-tag__link">Bouton home</a></li>
+
+            </ul>
+          </section>
+          <section class="product-social">
+            <h4 class="product-social__title">Partager : </h4>
+            <ul class="product-social__social-list">
+              <li class="product-social__social-list-item"><a class="product-social__link product-social__link--social-icon product-social__link--facebook-icon" href="#">Facebook</a></li>
+              <li class="product-social__social-list-item"><a class="product-social__link product-social__link--social-icon product-social__link--googleplus-icon" href="#">Google Plus</a></li>
+              <li class="product-social__social-list-item"><a class="product-social__link product-social__link--social-icon product-social__link--instagram-icon" href="#">Instagram</a></li>
+            </ul>
+          </section>
+        </aside>
+
+
+        <!-- product main section -->
+        <section class="main-product-description">
+
+          <h2 class="main-product-description__title">Main description</h2>
+
+          <!-- product list main tab -->
+          <ul class="tab__list">
+            <li class="tab__list-item">tab 1</li>
+            <li class="tab__list-item">tab 2</li>
+            <li class="tab__list-item">tab 3</li>
+          </ul>
+
+
+          <article>
+
+			       <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+			       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nobis ea, eaque veritatis ex in beatae distinctio possimus officiis dignissimos expedita reiciendis iste accusantium ad, autem quasi modi blanditiis. Quis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam repellendus, eum eius mollitia, voluptate molestiae corrupti ducimus quibusdam voluptatem nulla dolorem quidem necessitatibus eaque voluptatibus atque, accusamus, sint ipsam qui!</p>
+			       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eaque nam pariatur error eveniet sit nostrum dolor doloribus, suscipit nisi harum amet, ducimus fugit quisquam nemo repellat officiis eligendi. Commodi!</p>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eaque nam pariatur error eveniet sit nostrum dolor doloribus, suscipit nisi harum amet, ducimus fugit quisquam nemo repellat officiis eligendi. Commodi!</p>
+			       <h4>Canetrea ficilis</h4>
+			       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quidem, consequatur commodi, voluptate ea velit similique doloremque minus fuga omnis maiores provident explicabo debitis, dolore modi. Officia tempore, dolorem animi.</p>
+          </article>
+
+          <article>
+		         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+			       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nobis ea, eaque veritatis ex in beatae distinctio possimus officiis dignissimos expedita reiciendis iste accusantium ad, autem quasi modi blanditiis. Quis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam repellendus, eum eius mollitia, voluptate molestiae corrupti ducimus quibusdam voluptatem nulla dolorem quidem necessitatibus eaque voluptatibus atque, accusamus, sint ipsam qui!</p>
+			       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eaque nam pariatur error eveniet sit nostrum dolor doloribus, suscipit nisi harum amet, ducimus fugit quisquam nemo repellat officiis eligendi. Commodi!</p>
+			       <h4>Canetrea ficilis</h4>
+			       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quidem, consequatur commodi, voluptate ea velit similique doloremque minus fuga omnis maiores provident explicabo debitis, dolore modi. Officia tempore, dolorem animi.</p>
+
+          </article>
+
+          <article>
+          [Review and rating of the product]
+          </article>
+
+        </section>
+
+
+
+
+
+
+      <!-- Liste des produits en lien de la page -->
+
+      <section class="related-product">
+        <h2>Related product</2>
+        <!--
+      <ul class="product__list">
+        <li class="product__list-item">
+
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+            <span class="product-item__price">€23.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+        <li class="product__list-item">
+
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2018/03/glosnik_metal2_czarny-d-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+
+            <span class="product-item__price">€23.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+        <li class="product__list-item">
+
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/6S-WIT-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+
+            <span class="product-item__price">€13.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+        <li class="product__list-item">
+
+          <div class="product-item">
+            <a href="#[link]" class="product-item__link">
+              <img class="product-item__image" src="https://belmobile.eu/wp-content/uploads/2017/09/connecteur-iphone-5-324x324.jpg" alt="[product description]">
+            </a>
+            <h3 class="product-item__title"><a href="#[link]" class="product-item__link">[Product item title 01]</a></h3>
+            <span class="product-item__price">€23.65</span>
+            <div class="product-item__rating">
+              <span class="product-item__rating--star3_5">3,5/5</span>
+              <span class="product-item__rating-review-count">(16 reviews)</span>
+            </div>
+            <div class="buy-now">
+              <a href="[link]" class="buy-now__buy-button-link">Add to basket</a>
+              <a href="[link]" class="buy-now__view-button-link">View the item</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    -->
+  </section>
+</article>
+
+
+    </section>
+
+
+  </main>
+
+
+    <!-- Main Footer -->
+    <footer class="footer">
+      <!-- Footer Component 1 -->
+      <div class="card">
+        <h3 class="card__title">Service Clients</h3>
+        <ul class="card__list">
+            <li class="card__list-item"><a class="card__list-link" href="#">A Propos</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Nous contacter</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">FAQ</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Boutique</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Protection vie privée</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Conditions générales</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Component 2 -->
+      <div class="card">
+        <h3 class="card__title">Découvrez nos produits</h3>
+        <ul class="card__list">
+            <li class="card__list-item"><a class="card__list-link" href="#">Pièces détachées</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Outillages</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Accessoires</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Composants Samsung</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Composants iPhone</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Revendre son smartphone</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Component 3 -->
+      <div class="card">
+        <h3 class="card__title">Mon comptes</h3>
+        <ul class="card__list">
+            <li class="card__list-item"><a class="card__list-link" href="#">Inscription</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Panier</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Commandes</a></li>
+            <li class="card__list-item"><a class="card__list-link" href="#">Mot de passe perdu ?</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Component 4 -->
+      <div class="card">
+        <h3 class="card__title">Nous contacter ?</h3>
+        <p class="card__text">
+          Rue Ulens, 88 - 1080 Bruxelles (Molenbeek-Saint-Jean)
+        </p>
+        <p class="card__text">
+          Vous pouvez nous joindre par téléphone ou e-mail :
+        </p>
+        <p class="card__text">
+          +32 (0) 2 275 98 67<br />
+          info@belmobile.be<br />
+          BTW : BE0502737241
+        </p>
+      </div>
+
+
+
+      <!-- Footer Component 5 -->
+
+      <!-- <div class="card">
+        <h3 class="card__title">Title card 1</h3>
+        <img src="https://robohash.org/belmobile?set=set1" alt="go" />
+      </div> -->
+
+      <!-- Footer Component 6 -->
+      <div class="card">
+        <h3 class="card__title">Share with us</h3>
+        <ul class="card__list card__list--social">
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--facebook-icon" href="https://facebook.com">Facebook</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--twitter-icon" href="https://twitter.com">Twitter</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--pinterest-icon" href="https://pinterest.com">Pinterest</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--googleplus-icon" href="https://plus.google.com">Google Plus</a></li>
+            <li class="card__list-item"><a class="card__list-link--social-icon card__list-link--instagram-icon" href="https://www.instagram.com">Instagram</a></li>
+        </ul>
+      </div>
+
+    </footer>
+    <!-- /Main Footer -->
+
+    <!-- Secondary Footer -->
+    <div class="copyright">
+      <p class="copyright__text">belmobile Copyright [2018]</p>
+    </div>
+    <!-- /Secondary Footer -->
+  </body>
+</html>
